@@ -1,0 +1,46 @@
+# ── Python ──────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.whl
+
+# ── Virtual environments ─────────────────
+.venv/
+venv/
+env/
+.env
+
+# ── Data files (regenerated on run) ─────
+data/training_data.csv
+data/incoming_data.csv
+
+# ── Logs (runtime generated) ────────────
+logs/pipeline.log
+logs/drift_log.csv
+logs/predictions_log.csv
+logs/retrain_cooldown.json
+logs/training_meta.json
+
+# ── Trained model (large binary) ─────────
+models/model_v1.pkl
+
+# ── Test artefacts ────────────────────────
+.pytest_cache/
+pytest_out.txt
+pytest_detailed.txt
+test_de.txt
+test_results.txt
+.coverage
+htmlcov/
+
+# ── IDE / OS ──────────────────────────────
+.idea/
+.vscode/
+*.DS_Store
+Thumbs.db
