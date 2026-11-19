@@ -43,8 +43,8 @@ logging.basicConfig(
     format="%(asctime)s | %(levelname)-8s | %(message)s",
     datefmt="%Y-%m-%d %H:%M:%S",
     handlers=[
-        logging.FileHandler(config.PIPELINE_LOG),
-        logging.StreamHandler(sys.stdout),
+        logging.FileHandler(config.PIPELINE_LOG, encoding="utf-8"),
+        logging.StreamHandler(open(sys.stdout.fileno(), mode='w', encoding='utf-8', closefd=False)),
     ],
 )
 logger = logging.getLogger(__name__)

@@ -149,6 +149,8 @@ class DecisionEngine:
                     f"Average model confidence {avg_confidence:.3f} is below "
                     f"threshold {conf_threshold:.2f}. "
                     "Model predictions are uncertain — retraining advised."
+                ) if avg_confidence is not None else (
+                    "Model confidence data unavailable — retraining advised."
                 ),
             ),
             # ── Rule 5 — Everything looks fine (catch-all) ───────────────

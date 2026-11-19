@@ -211,7 +211,7 @@ def load_log_lines(n: int = 40) -> list:
     """Return the last N lines from pipeline.log."""
     if not os.path.exists(config.PIPELINE_LOG):
         return []
-    with open(config.PIPELINE_LOG, "r") as f:
+    with open(config.PIPELINE_LOG, "r", encoding="utf-8", errors="replace") as f:
         return f.readlines()[-n:]
 
 
